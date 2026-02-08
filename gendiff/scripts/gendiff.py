@@ -1,16 +1,20 @@
-from .argparser import parse_args
-from .read import json_to_python
-from .find_diff import find_diff
+from .argparser import parse_arguments
+from gendiff.scripts.find_diff import find_diff
+from gendiff.scripts.converter import converter
+from gendiff.scripts.formattes.stylish import stylish
 
-
-def generate_diff(file_path1, file_path2) -> str:
-    data1 = json_to_python(file_path1)
-    data2 = json_to_python(file_path2)
+def generate_diff(file_path1: str, file_path2: str, format_name='stylish') -> str:
+    data1 = converter(file_path1)
+    data2 = converter(file_path2)
     diff = find_diff(data1, data2)
-    return diff
+    if format_name == 'stylish':
+        formated_diff = stylish(diff)
+    return formated_diff
+
 
 def main():
-    parse_args()
+    parse_arguments()
+    generate_diff()
 
 
 if __name__ == "__main__":
