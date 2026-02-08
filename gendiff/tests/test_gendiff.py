@@ -1,16 +1,26 @@
+from pathlib import Path
 from gendiff.scripts.gendiff import generate_diff
 
-JSON_OLD = 'gendiff/tests/test_data/file1.json'
-JSON_NEW = 'gendiff/tests/test_data/file2.json'
+
+def get_path(filename):
+    return Path(__file__).parent/'test_data'/filename
 
 
-def test_gendiff():
-    diff = generate_diff(JSON_OLD, JSON_NEW)
-    diff_file_path = 'gendiff/tests/test_data/diff.txt'
+def test_gendiff_stylish_json():
+    file1 = get_path('file1.json')
+    file2 = get_path('file2.json')
+    diff = generate_diff(file1, file2)
+    diff_file_path = get_path('diff.txt')
     with open(diff_file_path) as file:
         result = file.read()
     assert diff == result
 
 
-if __name__ == "__main__":
-    test_gendiff()
+def test_gendiff_stylish_yaml():
+    file1 = get_path('file1.yaml')
+    file2 = get_path('file2.yaml')
+    diff = generate_diff(file1, file2)
+    diff_file_path = get_path('diff.txt')
+    with open(diff_file_path) as file:
+        result = file.read()
+    assert diff == result
