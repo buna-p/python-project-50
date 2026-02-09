@@ -3,6 +3,8 @@ from gendiff.scripts.find_diff import find_diff
 from gendiff.scripts.converter import converter
 from gendiff.scripts.formattes.stylish import stylish
 from gendiff.scripts.formattes.plain import plain
+from gendiff.scripts.formattes.json import to_json
+
 
 def generate_diff(file_path1: str, file_path2: str, format_name='stylish') -> str:
     data1 = converter(file_path1)
@@ -12,6 +14,8 @@ def generate_diff(file_path1: str, file_path2: str, format_name='stylish') -> st
         formated_diff = stylish(diff)
     elif format_name == 'plain':
         formated_diff = plain(diff)
+    else:
+        formated_diff = to_json(diff)
     return formated_diff
 
 
