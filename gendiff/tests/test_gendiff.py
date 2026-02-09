@@ -1,9 +1,11 @@
 from pathlib import Path
+
 from gendiff.scripts.gendiff import generate_diff
 
 
 def get_path(filename):
-    return Path(__file__).parent/'test_data'/filename
+
+    return Path(__file__).parent / 'test_data' / filename
 
 
 def test_gendiff_stylish_json():

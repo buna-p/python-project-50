@@ -1,4 +1,6 @@
 import json
+import os
+
 import yaml
 
 
@@ -15,7 +17,7 @@ def yaml_to_python(file_path):
 
 
 def converter(file_path):
-    extension_file = file_path.suffix
+    extension_file = os.path.splitext(file_path)[-1]
     if extension_file == '.json':
         data = json_to_python(file_path)
     elif extension_file in ['.yaml', '.yml']:
