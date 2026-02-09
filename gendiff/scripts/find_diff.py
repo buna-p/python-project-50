@@ -1,4 +1,4 @@
-def find_diff(data1: dict, data2: dict) -> str:
+def find_diff(data1: dict, data2: dict) -> list:
     diff = []
     keys = sorted(set(data1.keys() | data2.keys()))
 
