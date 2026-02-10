@@ -28,3 +28,5 @@
 
 
 ## Примеры работы
+
+[![asciicast](https://asciinema.org/a/qHVDlLKb8xrNFtgs.svg)](https://asciinema.org/a/qHVDlLKb8xrNFtgs)
