@@ -30,3 +30,9 @@
 ## Примеры работы
 
 [![asciicast](https://asciinema.org/a/qHVDlLKb8xrNFtgs.svg)](https://asciinema.org/a/qHVDlLKb8xrNFtgs)
+
+[![asciicast](https://asciinema.org/a/CNgalPsFIcerbbYW.svg)](https://asciinema.org/a/CNgalPsFIcerbbYW)
+
+[![asciicast](https://asciinema.org/a/uGJXqKn76FpMYUbx.svg)](https://asciinema.org/a/uGJXqKn76FpMYUbx)
+
+[![asciicast](https://asciinema.org/a/1E6t9QOCyLhw1RAR.svg)](https://asciinema.org/a/1E6t9QOCyLhw1RAR)
