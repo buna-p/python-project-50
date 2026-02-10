@@ -14,6 +14,6 @@ def generate_diff(file_path1: str, file_path2: str, format_name='stylish') -> st
             formated_diff = stylish(diff)
         case 'plain':
             formated_diff = plain(diff)
-        case 'to_json':
+        case 'json':
             formated_diff = to_json(diff)
     return formated_diff
