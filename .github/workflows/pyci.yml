@@ -30,6 +30,6 @@ jobs:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
           args: >
-            -Dsonar.projectKey=buna-p_python-project-50
-            -Dsonar.organization=buna-p
-            -Dsonar.python.coverage.reportPaths=coverage.xml
+            "-Dsonar.projectKey=buna-p_python-project-50"
+            "-Dsonar.organization=buna-p"
+            "-Dsonar.python.coverage.reportPaths=coverage.xml"
