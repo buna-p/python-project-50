@@ -14,7 +14,7 @@ def format_value(value, depth) -> str:
         return '\n'.join(result)
     elif value == '':
         return ''
-    elif not value:
+    elif value is None:
         return 'null'
     else:
         return value
