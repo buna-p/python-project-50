@@ -12,10 +12,6 @@ def format_value(value, depth) -> str:
             result.append(f'{indent}{k}: {format_value(v, depth + 1)}')
         result.append(f'{(' ' * INDENT * depth)}}}')
         return '\n'.join(result)
-    elif value == '':
-        return ''
-    elif value == 0:
-        return 0
     elif value is None:
         return 'null'
     else:
