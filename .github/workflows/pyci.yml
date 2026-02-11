@@ -21,6 +21,9 @@ jobs:
       - name: Run linter and pytest
         run: |
           make tests
+      - name: Run test coverage
+        run: |
+          make test-coverage
       - name: SonarQubeScan
         uses: SonarSource/sonarqube-scan-action@v6
         env:
@@ -29,3 +32,4 @@ jobs:
           args: >
             -Dsonar.projectKey=buna-p_python-project-50
             -Dsonar.organization=buna-p
+            -Dsonar.python.coverage.reportPaths=coverage.xml
