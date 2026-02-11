@@ -5,7 +5,7 @@ def format_value(value):
         return str(value).lower()
     elif value == '':
         return "''"
-    elif not value:
+    elif value is None:
         return 'null'
     return f"'{value}'"
 
