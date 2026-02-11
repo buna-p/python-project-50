@@ -7,7 +7,9 @@ def format_value(value):
         return "''"
     elif value is None:
         return 'null'
-    return f"'{value}'"
+    elif isinstance(value, str):
+        return f"'{value}'"
+    return str(value)
 
 
 def plain(diff: dict, path='') -> str:
